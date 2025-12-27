@@ -14,7 +14,7 @@ app.use('/', homeRoutes);
 async function startServer() {
   try {
     await sequelize.authenticate();
-    console.log('Database connection has been established successfully.');
+    console.log('Database connection has been established successfully 2.');
     await sequelize.sync(); // Sync models with the database (creates tables if they don't exist)
     console.log('All models were synchronized successfully.');
 
