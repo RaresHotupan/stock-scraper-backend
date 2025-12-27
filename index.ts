@@ -18,9 +18,9 @@ async function startServer() {
     await sequelize.sync(); // Sync models with the database (creates tables if they don't exist)
     console.log('All models were synchronized successfully.');
 
-    app.listen(port, () => {
-      console.log(`Server listening at http://localhost:${port}`);
-    });
+      app.listen(port, '0.0.0.0', () => {
+          console.log(`Server listening at http://0.0.0.0:${port}`);
+      });
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
